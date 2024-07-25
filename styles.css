@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundFlicker 0.01s infinite alternate;
+}
+
+
+#animationContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polygon, .name, .icon, .phrase {
+    position: absolute;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 5px white;
+    opacity: 0.8;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.flicker {
+    animation: flicker 0.1s infinite;
+}
+
+@keyframes backgroundFlicker {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: white;
+    }
+}
